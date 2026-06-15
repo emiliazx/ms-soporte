@@ -19,9 +19,7 @@ public class SoporteService {
 
     private final TicketRepository ticketRepository;
 
-    // ── Usuario ──
 
-    /** Crear ticket — el id y username se extraen del token */
     public TicketResponse crearTicket(CrearTicketRequest request, UsuarioPrincipal principal) {
         Ticket ticket = Ticket.builder()
                 .idUsuario(principal.getId())
@@ -36,14 +34,14 @@ public class SoporteService {
         return toResponse(ticketRepository.save(ticket));
     }
 
-    /** Ver mis tickets */
+  
     public List<TicketResponse> getMisTickets(UsuarioPrincipal principal) {
         return ticketRepository
                 .findByIdUsuarioOrderByFechaCreacionDesc(principal.getId())
                 .stream().map(this::toResponse).toList();
     }
 
-    /** Ver detalle de un ticket propio */
+  
     public TicketResponse getMiTicket(Integer id, UsuarioPrincipal principal) {
         Ticket ticket = ticketRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Ticket no encontrado: " + id));
@@ -53,21 +51,19 @@ public class SoporteService {
         return toResponse(ticket);
     }
 
-    // ── ADMIN ──
-
-    /** Ver todos los tickets */
+ 
     public List<TicketResponse> getTodosTickets() {
         return ticketRepository.findAllByOrderByFechaCreacionDesc()
                 .stream().map(this::toResponse).toList();
     }
 
-    /** Ver tickets por estado */
+
     public List<TicketResponse> getTicketsPorEstado(EstadoTicket estado) {
         return ticketRepository.findByEstadoOrderByFechaCreacionAsc(estado)
                 .stream().map(this::toResponse).toList();
     }
 
-  //responde ticket y se puede cambiar estado de el 
+  
     public TicketResponse responderTicket(Integer id, ResponderTicketRequest request) {
         Ticket ticket = ticketRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Ticket no encontrado: " + id));
@@ -79,8 +75,7 @@ public class SoporteService {
         return toResponse(ticketRepository.save(ticket));
     }
 
-    // ── Mapper ────
-
+  
     private TicketResponse toResponse(Ticket t) {
         return TicketResponse.builder()
                 .id(t.getId())

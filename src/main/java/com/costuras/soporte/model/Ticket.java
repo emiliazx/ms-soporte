@@ -30,11 +30,9 @@ public class Ticket {
     private Integer id;
 
     @Column(name = "id_usuario", nullable = false)
-    private Integer idUsuario;                  // extraído del token JWT
-
+    private Integer idUsuario;                
     @Column(name = "username_usuario", nullable = false)
-    private String usernameUsuario;             // extraído del token JWT
-
+    private String usernameUsuario;            
     @Column(nullable = false)
     private String asunto;
 
@@ -43,11 +41,11 @@ public class Ticket {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private TipoTicket tipo;                    // AYUDA, RECLAMO, SUGERENCIA
+    private TipoTicket tipo;                   
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private EstadoTicket estado;                // ABIERTO, EN_PROCESO, RESUELTO, CERRADO
+    private EstadoTicket estado;               
 
     @Column(name = "fecha_creacion", nullable = false)
     private LocalDateTime fechaCreacion;
@@ -56,5 +54,5 @@ public class Ticket {
     private LocalDateTime fechaActualizacion;
 
     @Column(name = "respuesta_admin", columnDefinition = "TEXT")
-    private String respuestaAdmin;              // el ADMIN responde desde aquí
+    private String respuestaAdmin;             
 }
