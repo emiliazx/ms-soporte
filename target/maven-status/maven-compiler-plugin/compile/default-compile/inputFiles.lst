@@ -1,0 +1,16 @@
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/SoporteApplication.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/controller/SoporteController.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/dto/CrearTicketRequest.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/dto/ResponderTicketRequest.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/dto/TicketResponse.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/excepciones/AppExceptionHandler.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/model/EstadoTicket.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/model/Ticket.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/model/TipoTicket.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/repository/TicketRepository.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/security/JwtAuthenticationFilter.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/security/JwtUtil.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/security/SecurityConfig.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/security/UsuarioPrincipal.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/service/SoporteService.java
+/Users/cristianvargas/Downloads/proyecto-2/soporte/src/main/java/com/costuras/soporte/swagger/SwaggerConfig.java
