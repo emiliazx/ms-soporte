@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
+@SuppressWarnings("null")
 @Service
 @RequiredArgsConstructor
 public class SoporteService {
